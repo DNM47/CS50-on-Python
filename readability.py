@@ -29,10 +29,3 @@ if n_index < 1:
 elif n_index >= 16:
     print("Grade 16+")
 else: print(f"Grade {n_index}")
-
-# print(sentence_count)
-# print(letter_count)
-# print(word_count)
-# print(L)
-# print(S)
-# print(n_index)
