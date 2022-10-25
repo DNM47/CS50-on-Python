@@ -4,16 +4,16 @@ if len(sys.argv) != 2:                  # Check if there are less or more than 2
     print('Usage: ./caesar key\n')
     exit()
 else:
-    num = sys.argv[1]
+    num = sys.argv[1]                   # Converting the 2nd argument into a int
 
-    while True:
+    while True:                         # if there is negative number, string or empty string end code
         try:
-            if int(num) < 0:
+            if int(num) < 0:            
                 exit()  
             elif int(num) == ' ':
                 exit()           
         except:
-            print("Usage: ./caesar key\n")
+            print("Usage: ./caesar key\n") 
             exit()
         break
 
