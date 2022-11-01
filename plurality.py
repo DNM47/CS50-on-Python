@@ -1,6 +1,15 @@
 import sys
 
+MAX = 9
 ar = sys.argv
+
+if len(ar) < 2:
+    print("Usage: plurality [candidate ...]")
+    exit()
+elif len(ar) - 1 > MAX:
+    print(f"Maximum number of candidates is {MAX}")
+    exit()
+
 candidates = {ar[1]:0, ar[2]:0}
 
 try:
@@ -12,10 +21,11 @@ except:
 votes = input('Number of votes: ')
 vote_count = 1
 
-while int(votes) >= vote_count and int(votes) <= 9: 
+for n in range(int(votes)): 
     candidate = input('vote: ')
-    if int(votes) > 9:
-        break
+    if candidate not in candidates:
+        print("Invalid vote.")
+        exit()
     for c in candidates:
         c = candidate
         if c in candidates:
